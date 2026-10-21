@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #fffbf7;
+    --card-bg: #ffffff;
+    --primary-color: #d97706; 
+    --primary-hover: #b45309;
+    --text-color: #451a03;  
+    --text-light: #78350f;
+    --border-color: #fde68a;
+    --shadow: 0 10px 15px -3px rgba(180, 83, 9, 0.1), 0 4px 6px -4px rgba(180, 83, 9, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(135deg, #78350f, #451a03);
+    color: #fff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header strong {
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #fef3c7;
+}
+
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fffbeeb0;
+    color: var(--primary-color);
+}
+.producto {
+    background-color: #ffffff;
+    border: 2px solid var(--border-color); 
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 250px;         
+    object-fit: cover;     
+    object-position: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    box-sizing: border-box;
+}
+/* Contenedor del botón */
+.contenedor-volver {
+    text-align: center;
+    margin: 25px 0;
+}
+
+/* Diseño del botón estilizado */
+.btn-volver-lab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #78350f;                     /* Tono marrón cálido acorde a la panadería */
+    border: 2px solid #78350f;
+    padding: 10px 22px;
+    border-radius: 25px;                /* Bordes redondeados y elegantes */
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+}
+.contenedor-volver {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-volver-lab {
+    display: inline-block !important;
+    background-color: #78350f !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    font-family: sans-serif !important;
+}
+
+.btn-volver-lab:hover {
+    background-color: #451a03 !important;
+}
