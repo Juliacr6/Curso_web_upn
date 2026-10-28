@@ -68,3 +68,31 @@ nav a:hover {
 nav a:active {
     transform: translateY(0);
 }
+/* ===== 7. Mensajes de validación ===== */
+
+.error {
+  margin: 0;
+  color: #A11A1A; /* Rojo oscuro para buen contraste */
+  font-weight: bold;
+}
+
+.error:empty {
+  display: none; /* Si no hay mensaje, no ocupa espacio en pantalla */
+}
+
+.error::before {
+  content: "⚠ "; /* Agrega el icono de advertencia antes del texto */
+}
+
+[aria-invalid="true"] {
+  border-color: #A11A1A;
+  border-width: 3px; /* Borde más grueso en el campo con error */
+}
+
+#estado:not(:empty) {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--cafe);
+  border-radius: 8px;
+  background: #FFFFFF;
+  font-weight: bold;
+}
