@@ -1,0 +1,287 @@
+:root {
+    --bg-color: #fffbf7;
+    --card-bg: #ffffff;
+    --primary-color: #d97706; 
+    --primary-hover: #b45309;
+    --text-color: #451a03;  
+    --text-light: #78350f;
+    --border-color: #fde68a;
+    --shadow: 0 10px 15px -3px rgba(180, 83, 9, 0.1), 0 4px 6px -4px rgba(180, 83, 9, 0.1);
+    --cafe: #4a2c11;
+    --crema: #fcf8f2;
+    --blanco: #ffffff;
+    --rojo-error: #9E3B27; 
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #78350f, #451a03);
+    color: #fff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header strong {
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #fef3c7;
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fffbeeb0;
+    color: var(--primary-color);
+}
+
+.producto {
+    background-color: #ffffff;
+    border: 2px solid var(--border-color); 
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 250px;         
+    object-fit: cover;     
+    object-position: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Botones Añadir en el catálogo */
+.btn-anadir {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-anadir:hover {
+    background-color: var(--primary-hover);
+}
+
+.contenedor-volver {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-volver-lab {
+    display: inline-block !important;
+    background-color: #78350f !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    font-family: sans-serif !important;
+}
+
+.btn-volver-lab:hover {
+    background-color: #451a03 !important;
+}
+
+.error {
+    margin: 4px 0 10px 0;
+    color: var(--rojo-error);
+    font-weight: bold;
+}
+
+.error:empty {
+    display: none;
+}
+
+.error::before {
+    content: "⚠ ";
+}
+
+[aria-invalid="true"] {
+    border-color: var(--rojo-error) !important;
+    border-width: 3px !important;
+    background-color: #fdf3f0; 
+}
+
+/* ===== 8. Mi pedido (Semana 4 - Estilos & Reto) ===== */
+#mi-pedido {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #FFFFFF;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+#lista-pedido {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+#lista-pedido li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #fde68a;
+}
+
+.controles-item {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.btn-sumar, .btn-restar {
+    padding: 0.3rem 0.6rem;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fffbeeb0;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.btn-sumar:hover, .btn-restar:hover {
+    background-color: var(--border-color);
+}
+
+.btn-quitar {
+    width: auto;
+    background: #FFFFFF;
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-quitar:hover {
+    background: var(--text-light);
+    color: #FFFFFF;
+}
+
+.btn-vaciar {
+    margin-top: 1rem;
+    background-color: #fff5f5;
+    color: var(--rojo-error);
+    border: 1px solid var(--rojo-error);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-vaciar:hover {
+    background-color: var(--rojo-error);
+    color: #FFFFFF;
+}
+
+#sugerencia-mantequilla {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 1rem 1.5rem;
+    background-color: #fef3c7;
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-mantequilla {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-mantequilla:hover {
+    background-color: var(--primary-hover);
+}
+
+.total {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+#titulo-pedido:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.solo-lector {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Uso de Eventos</h1>
+    <button id="miBoton">! Haz clic aqui !</button>
+    <script>
+        // PASO 1 : Seleccionar el elemento miBoton
+        const boton = document.getElementById("miBoton")
+        // PASO 2 : Definir la funcion manejador
+        // En la funcion puede ir cualquier nombre
+        function responderClic(){
+            alert("! El usuario hizo clic en el boton !")
+        }
+        // PASO 3 : Registrar el escuchador de eventos 
+        boton.addEventListener('click', responderClic)
+    </script>
+</body>
+</html>
